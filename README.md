@@ -15,7 +15,7 @@ Requires Python >= 3.12.
 ## Usage
 
 ```python
-from iri_models.nersc.models import Job, JobStatus  # or iri_models.s3df.models
+from iri_models.nersc import Job, JobStatus  # or iri_models.s3df
 ```
 
 There should not be too many meaningful differences between these models, as they all stem from the same upstream [repo](https://github.com/doe-iri/iri-facility-api-python).
