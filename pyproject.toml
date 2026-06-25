@@ -1,0 +1,8 @@
+[dependency-groups]
+dev = [
+    "datamodel-code-generator[http]>=0.65.0",
+    "ruff>=0.15.19",
+]
+
+[tool.uv.workspace]
+members = ["nersc", "s3df"]
