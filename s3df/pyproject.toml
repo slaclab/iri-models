@@ -1,0 +1,30 @@
+[project]
+name = "iri-models-s3df"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic"
+]
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "iri_models.s3df"
+
+[tool.pyrefly]
+project-includes = [
+    "**/*.py*",
+    "**/*.ipynb",
+]
+
+[tool.datamodel-codegen]
+field-constraints = true
+input = "openapi.json"
+input-file-type = "openapi"
+output = "src/iri_models/s3df/models.py"
+preset = "practical-py312-20260619"
+use-title-as-name = false
+disable-timestamp = false
+formatters = ["ruff-format", "ruff-check"]
